@@ -31,7 +31,7 @@ app.use(mongoSanitize());
 //Configuring Cors
 app.use(
     cors({
-      origin: ["https://murshidpro-pfe.vercel.app/"],
+      origin: ["https://murshidpro-pfe.vercel.app"],
       credentials: true,
     })
   );
