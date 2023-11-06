@@ -15,8 +15,8 @@ getCheckoutSession = async (req, res, next) =>  {
   // 2) Create checkout session
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    success_url: 'http://localhost:3000/payment-successful',
-    cancel_url: 'http://localhost:3000/tours',
+    success_url: 'https://murshidpro-pfe.vercel.app/payment-successful',
+    cancel_url: 'https://murshidpro-pfe.vercel.app/tours',
     customer_email: req.user.email,
     client_reference_id: req.params.id,
     mode:'payment',

@@ -31,7 +31,7 @@ app.use(mongoSanitize());
 //Configuring Cors
 app.use(
     cors({
-      origin: ["http://localhost:3000",],
+      origin: ["https://murshidpro-pfe.vercel.app/"],
       credentials: true,
     })
   );
@@ -86,7 +86,7 @@ mongoose
             from: 'Murshidsupp55@gmail.com',
             to: email,
             subject: 'Reset Password Link',
-            text: `http://localhost:3000/reset_password/${user._id}/${token}`
+            text: `https://murshidpro-pfe.vercel.app/reset_password/${user._id}/${token}`
           };
           
           transporter.sendMail(mailOptions, function(error, info){
